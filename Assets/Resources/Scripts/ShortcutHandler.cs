@@ -6,6 +6,7 @@ public class ShortcutHandler : MonoBehaviour
 {
     private GameObject textGameDescription;
     private GameObject textStart;
+    private GameObject btnExitGame;
     private bool isPaused;
 
     // The game starts paused by default, for the player to read the 
@@ -17,6 +18,7 @@ public class ShortcutHandler : MonoBehaviour
 
         textGameDescription = GameObject.Find("textGameDescription");
         textStart = GameObject.Find("textStart");
+        btnExitGame = GameObject.Find("btnExitGame");
     }
 
     //Listen for keys corresponding to shortcuts that the player
@@ -60,6 +62,7 @@ public class ShortcutHandler : MonoBehaviour
             //Hide the elements in the pause HUD
             textGameDescription.SetActive(false);
             textStart.SetActive(false);
+            btnExitGame.SetActive(false);
             isPaused = false;
         }            
         else
@@ -70,6 +73,7 @@ public class ShortcutHandler : MonoBehaviour
             //Show the elements in the pause HUD
             textGameDescription.SetActive(true);
             textStart.SetActive(true);
+            btnExitGame.SetActive(true);
             isPaused = true;
         }
     }

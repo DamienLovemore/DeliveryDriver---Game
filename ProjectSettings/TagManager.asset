@@ -7,6 +7,7 @@ TagManager:
   - Package
   - Customer
   - HUD
+  - UI
   layers:
   - Default
   - TransparentFX
