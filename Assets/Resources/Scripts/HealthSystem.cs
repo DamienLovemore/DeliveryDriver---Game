@@ -46,7 +46,6 @@ public class HealthSystem : MonoBehaviour
         //Sets the player new health
         health = newHealth;
         healthIndicator.value = health;
-        Debug.Log(healthIndicator.value);
     }
 
     //Damages the user by a given percentage amount of its health
