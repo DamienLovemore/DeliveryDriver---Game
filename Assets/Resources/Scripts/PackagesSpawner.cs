@@ -44,7 +44,6 @@ public class PackagesSpawner : MonoBehaviour
 	    //Generate randomly a number between 0 and length-1 the
         //number of Customers we have
         int randomCustomer = Random.Range(0, 8);
-        Debug.Log(randomCustomer);
 
 	    SpriteRenderer customerRenderer = customersContainer.transform.GetChild(randomCustomer).GetComponent<SpriteRenderer>();
 	    packageColor = customerRenderer.color;
@@ -61,7 +60,6 @@ public class PackagesSpawner : MonoBehaviour
         //Generate randomly a number between 0 and length-1 the
         //number of SpawnPoints we have
         int randomPosition = Random.Range(0, 8);
-        Debug.Log(randomPosition);
 
         Transform spawnPoint = spawnsContainer.transform.GetChild(randomPosition);
         spawnPosition = spawnPoint.position;

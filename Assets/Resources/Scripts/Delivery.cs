@@ -3,20 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Delivery : MonoBehaviour
-{
-    //Handle score and highscore information and display
-    [SerializeField] ScoreManager scoreManager;
-    //Handle the spawn of packages
-    [SerializeField] PackagesSpawner spawnManager;
+{    
     //Stores all the packages collected (just once per time,
     //but if need to expand it is already a list)
     List<Color> packagesCollected;
     //The number of seconds to await before destroying the package
     [SerializeField] float packageDelay;
-    
+    //Handle score and highscore information and display
+    [SerializeField] ScoreManager scoreManager;
+    //Handle the spawn of packages
+    [SerializeField] PackagesSpawner spawnManager;
+    [SerializeField] HealthSystem healthManager;
+
     private void Start()
     {
         packagesCollected = new List<Color>();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        healthManager.DamagePlayer(20.0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
