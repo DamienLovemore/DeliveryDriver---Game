@@ -44,7 +44,7 @@ public class ShortcutHandler : MonoBehaviour
             {
                 Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
             }
-            else if (actualScreenMode == FullScreenMode.ExclusiveFullScreen)
+            else
             {
                 Screen.fullScreenMode = FullScreenMode.Windowed;
             }
